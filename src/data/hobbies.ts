@@ -26,7 +26,7 @@ export const hobbies: Hobby[] = [
     description:
       "Road cycling is my way of clearing my head. Long weekend rides through the countryside, chasing KOMs on Strava, and occasionally bonking 60 km from home. The bike is a machine I understand completely — every component, every adjustment matters.",
     images: [
-      "/life/%E9%AA%91%E8%A1%8C/IMG_20231003_095251.jpg",
+      "/life/%E9%AA%91%E8%A1%8C/IMG_20250914_093515.jpg",
       "/life/%E9%AA%91%E8%A1%8C/IMG_20231003_122114.jpg",
       "/life/%E9%AA%91%E8%A1%8C/IMG_20250914_093515.jpg",
       "/life/%E9%AA%91%E8%A1%8C/IMG_20250914_113423.jpg",
@@ -42,6 +42,7 @@ export const hobbies: Hobby[] = [
     description:
       "I spend a lot of time at my desk, so I've put real thought into making it a space I enjoy. Custom keyboard, carefully chosen peripherals, good lighting, clean cable routing. It's a perpetual work in progress.",
     images: [
+      "/life/%E6%A1%8C%E6%90%AD/%E5%AE%BF%E8%88%8D2.jpg",
       "/life/%E6%A1%8C%E6%90%AD/%E5%B7%A5%E4%BD%8D1.jpg",
       "/life/%E6%A1%8C%E6%90%AD/%E5%B7%A5%E4%BD%8D2.jpg",
       "/life/%E6%A1%8C%E6%90%AD/%E5%B7%A5%E4%BD%8D3.jpg",
@@ -72,6 +73,7 @@ export const hobbies: Hobby[] = [
     description:
       "3D printing bridges my digital designs and the physical world. I print everything from robot parts and camera mounts to custom enclosures. Dialing in print settings is its own kind of engineering challenge.",
     images: [
+      "/life/3d%E6%89%93%E5%8D%B0/3d%E6%89%93%E5%8D%B0%E4%BB%B6.jpg",
       "/life/3d%E6%89%93%E5%8D%B0/3d%E6%89%93%E5%8D%B0.jpg",
       "/life/3d%E6%89%93%E5%8D%B0/3d%E6%89%93%E5%8D%B0%E4%BB%B6.jpg",
       "/life/3d%E6%89%93%E5%8D%B0/3d%E6%89%93%E5%8D%B0%E6%91%84%E5%83%8F%E5%A4%B4%E5%9B%BA%E5%AE%9A.jpg",

@@ -75,7 +75,7 @@ export default function Home() {
             >
               <div className="w-56 h-56 md:w-72 md:h-72 rounded-3xl overflow-hidden bg-neutral-100 dark:bg-neutral-800">
                 <Image
-                  src="/avatar.webp"
+                  src="/avatar.jpg"
                   alt="Junkai Huang"
                   width={288}
                   height={288}

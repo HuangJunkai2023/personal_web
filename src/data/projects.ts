@@ -33,7 +33,7 @@ export const projects: Project[] = [
       "Led embedded development for a swerve-drive infantry robot — custom encoder design, gimbal stabilization, omnidirectional chassis control, and power management. Won 1st place at the Southwest Regional and 3rd nationally at RoboMaster 2025.",
     category: "Competitions",
     tags: ["STM32H7", "FreeRTOS", "CAN Bus", "PID", "FOC", "C++"],
-    image: "/projects/robomaster_infantry/IMG_20250312_135819.jpg",
+    image: "/projects/robomaster_infantry/IMG_8531.jpg",
     images: [
       "/projects/robomaster_infantry/IMG_20250312_135819.jpg",
       "/projects/robomaster_infantry/20250316-145007.jpg",
@@ -59,7 +59,7 @@ export const projects: Project[] = [
       "Embedded lead for a 7-axis robotic arm engineer robot with mecanum chassis. Built the full control stack from ROS2+MoveIt2 motion planning on the host PC down to real-time joint control on STM32.",
     category: "Competitions",
     tags: ["STM32", "ROS2", "MoveIt2", "IKFast", "FreeRTOS", "USB CDC"],
-    image: "/projects/robomaster_engineer/IMG_20250416_000508.jpg",
+    image: "/projects/robomaster_engineer/IMG_8522.jpg",
     images: [
       "/projects/robomaster_engineer/IMG_20250416_000508.jpg",
       "/projects/robomaster_engineer/IMG_8522.jpg",
@@ -110,7 +110,7 @@ export const projects: Project[] = [
       "Built a complete electronic system from scratch in 4 days for the National Electronic Design Contest. Competed at the provincial level.",
     category: "Competitions",
     tags: ["STM32", "Analog Design", "PCB", "Signal Processing"],
-    image: "/projects/%E7%94%B5%E8%B5%9B/IMG_20250727_215616.jpg",
+    image: "/projects/%E7%94%B5%E8%B5%9B/IMG_20250802_105951.jpg",
     images: [
       "/projects/%E7%94%B5%E8%B5%9B/IMG_20250727_215616.jpg",
       "/projects/%E7%94%B5%E8%B5%9B/IMG_20250802_105951.jpg",

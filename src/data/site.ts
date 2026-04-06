@@ -32,8 +32,8 @@ This site is where I share my projects, interests, and the occasional thought. I
     { category: "Software", items: ["C/C++", "Python", "TypeScript", "Git", "Linux"] },
   ],
   contact: {
-    email: "your.email@example.com",
-    github: "https://github.com/yourusername",
+    email: "442827947@qq.com",
+    github: "https://github.com/HuangJunkai2023",
     linkedin: "https://linkedin.com/in/yourusername",
     bilibili: "https://space.bilibili.com/yourid",
     xiaohongshu: "#",
