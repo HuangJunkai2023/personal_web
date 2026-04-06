@@ -38,14 +38,14 @@ export default function ContactPage() {
         <h2 className="text-xl font-semibold text-neutral-900 dark:text-white mb-2">{ui.resumeTitle}</h2>
         <p className="text-sm text-neutral-500 mb-6">{ui.resumeDesc}</p>
         <div className="grid sm:grid-cols-2 gap-4">
-          <a href="/%E8%A5%BF%E5%8D%97%E4%BA%A4%E5%A4%A7%E9%BB%84%E4%BF%8A%E5%87%BCMCU%E5%B5%8C%E5%85%A5%E5%BC%8F%E8%BD%AF%E4%BB%B6.pdf" download className="flex items-center justify-between p-5 rounded-2xl border border-neutral-200 dark:border-neutral-800 hover:border-neutral-400 dark:hover:border-neutral-600 transition-all group">
+          <a href="/resume-embedded.pdf" download className="flex items-center justify-between p-5 rounded-2xl border border-neutral-200 dark:border-neutral-800 hover:border-neutral-400 dark:hover:border-neutral-600 transition-all group">
             <div>
               <div className="text-sm font-medium text-neutral-900 dark:text-white group-hover:text-neutral-600 dark:group-hover:text-neutral-300 transition-colors">{ui.resumeEmbedded}</div>
               <div className="text-sm text-neutral-500">{ui.resumeEmbeddedSub}</div>
             </div>
             <span className="text-neutral-400 group-hover:text-neutral-600 dark:group-hover:text-neutral-300 transition-colors text-lg">&darr;</span>
           </a>
-          <a href="/%E8%A5%BF%E5%8D%97%E4%BA%A4%E5%A4%A7%E9%BB%84%E4%BF%8A%E5%87%BC%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%85%B7%E8%BA%AB%E6%99%BA%E8%83%BD.pdf" download className="flex items-center justify-between p-5 rounded-2xl border border-neutral-200 dark:border-neutral-800 hover:border-neutral-400 dark:hover:border-neutral-600 transition-all group">
+          <a href="/resume-robotics.pdf" download className="flex items-center justify-between p-5 rounded-2xl border border-neutral-200 dark:border-neutral-800 hover:border-neutral-400 dark:hover:border-neutral-600 transition-all group">
             <div>
               <div className="text-sm font-medium text-neutral-900 dark:text-white group-hover:text-neutral-600 dark:group-hover:text-neutral-300 transition-colors">{ui.resumeRobotics}</div>
               <div className="text-sm text-neutral-500">{ui.resumeRoboticsSub}</div>
