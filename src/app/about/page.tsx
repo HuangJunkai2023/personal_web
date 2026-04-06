@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import SectionTitle from "@/components/SectionTitle";
 
@@ -57,7 +58,12 @@ export default function AboutPage() {
   return (
     <main className="max-w-4xl mx-auto px-6 py-24">
       <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }}>
-        <SectionTitle title="About" />
+        <div className="flex flex-col sm:flex-row sm:items-center gap-8 mb-12">
+          <div className="w-28 h-28 rounded-2xl overflow-hidden bg-neutral-100 dark:bg-neutral-800 flex-shrink-0">
+            <Image src="/avatar.webp" alt="Junkai Huang" width={112} height={112} className="w-full h-full object-cover" />
+          </div>
+          <SectionTitle title="About" />
+        </div>
       </motion.div>
 
       {/* Intro */}

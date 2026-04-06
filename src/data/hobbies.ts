@@ -14,13 +14,9 @@ export const hobbies: Hobby[] = [
     description:
       "I hit the local karting track whenever I can. There's something deeply satisfying about finding the perfect braking point and shaving tenths off your lap time. It's engineering intuition applied at 80 km/h.",
     images: [
-      "/life/carting%26simrace/IMG_20250811_155134.jpg",
-      "/life/carting%26simrace/IMG_20251002_144046.jpg",
-      "/life/carting%26simrace/IMG_20251012_152454.jpg",
-      "/life/carting%26simrace/IMG_20260111_150710.jpg",
-      "/life/carting%26simrace/IMG_20260117_143048_1.jpg",
-      "/life/carting%26simrace/IMG_20260214_143202.jpg",
-      "/life/carting%26simrace/IMG_20260214_154630.jpg",
+      "/life/carting/IMG_20251002_144046.jpg",
+      "/life/carting/IMG_20260111_150710.jpg",
+      "/life/carting/IMG_20260117_143048_1.jpg",
     ],
   },
   {
@@ -35,6 +31,8 @@ export const hobbies: Hobby[] = [
       "/life/%E9%AA%91%E8%A1%8C/IMG_20250914_093515.jpg",
       "/life/%E9%AA%91%E8%A1%8C/IMG_20250914_113423.jpg",
       "/life/%E9%AA%91%E8%A1%8C/IMG_20260304_124259.jpg",
+      "/life/%E9%AA%91%E8%A1%8C/1757863797439.jpg",
+      "/life/%E9%AA%91%E8%A1%8C/Image_1757826870437.jpg",
     ],
   },
   {
@@ -59,8 +57,12 @@ export const hobbies: Hobby[] = [
     description:
       "When I can't get to a real track, I race in sim. A decent wheel and hours of practice on Assetto Corsa. It's surprisingly technical — setup tuning, telemetry analysis, racecraft. Basically engineering with a steering wheel.",
     images: [
-      "/life/carting%26simrace/IMG_20260120_211313.jpg",
-      "/life/carting%26simrace/Image_1767799681716_703.png",
+      "/life/simrace/IMG_20250811_155134.jpg",
+      "/life/simrace/IMG_20251012_152454.jpg",
+      "/life/simrace/IMG_20260120_211313.jpg",
+      "/life/simrace/IMG_20260214_143202.jpg",
+      "/life/simrace/IMG_20260214_154630.jpg",
+      "/life/simrace/Image_1767799681716_703.png",
     ],
   },
   {
