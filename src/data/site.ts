@@ -1,6 +1,6 @@
 export const siteConfig = {
-  name: "Your Name",
-  title: "Your Name — Engineer, Builder, Maker",
+  name: "Junkai Huang",
+  title: "Junkai Huang — Engineer, Builder, Maker",
   description:
     "Personal site of a student engineer focused on embedded systems, robotics, and embodied AI — who also happens to love karting, cycling, and tinkering with electronics.",
   headline: "I build things that move, think, and sometimes break.",

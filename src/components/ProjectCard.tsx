@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import type { Project } from "@/data/projects";
 
@@ -14,9 +15,14 @@ export default function ProjectCard({ project, index = 0 }: { project: Project; 
     >
       <Link href={`/projects/${project.slug}`} className="group block">
         <div className="rounded-2xl border border-neutral-200 dark:border-neutral-800 overflow-hidden bg-white dark:bg-neutral-900 hover:border-neutral-400 dark:hover:border-neutral-600 transition-all hover:shadow-lg">
-          {/* Placeholder image */}
-          <div className="aspect-video bg-gradient-to-br from-neutral-100 to-neutral-200 dark:from-neutral-800 dark:to-neutral-900 flex items-center justify-center">
-            <span className="text-neutral-400 dark:text-neutral-600 text-sm">Project Image</span>
+          <div className="aspect-video relative bg-gradient-to-br from-neutral-100 to-neutral-200 dark:from-neutral-800 dark:to-neutral-900">
+            {project.image ? (
+              <Image src={project.image} alt={project.title} fill className="object-cover" />
+            ) : (
+              <div className="absolute inset-0 flex items-center justify-center">
+                <span className="text-neutral-400 dark:text-neutral-600 text-sm">Project Image</span>
+              </div>
+            )}
           </div>
           <div className="p-6">
             <div className="text-xs font-medium text-neutral-500 uppercase tracking-wider mb-2">

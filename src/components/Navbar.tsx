@@ -21,7 +21,7 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-neutral-950/80 backdrop-blur-md border-b border-neutral-200 dark:border-neutral-800">
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         <Link href="/" className="text-lg font-semibold tracking-tight text-neutral-900 dark:text-white">
-          YN<span className="text-neutral-400">.</span>
+          HJK<span className="text-neutral-400">.</span>
         </Link>
 
         {/* Desktop */}

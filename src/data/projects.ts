@@ -5,7 +5,10 @@ export interface Project {
   category: string;
   tags: string[];
   image?: string;
+  images?: string[];
+  video?: string;
   featured?: boolean;
+  period?: string;
   details: {
     background: string;
     work: string;
@@ -24,126 +27,127 @@ export const categories = [
 
 export const projects: Project[] = [
   {
-    slug: "stm32-motor-controller",
-    title: "STM32 Brushless Motor Controller",
+    slug: "robomaster-infantry",
+    title: "RoboMaster Swerve Drive Infantry Robot",
     description:
-      "Designed and implemented a FOC (Field-Oriented Control) driver for BLDC motors on STM32F4, achieving smooth torque control at low speeds for robotic joint applications.",
-    category: "Embedded Systems",
-    tags: ["STM32F4", "FOC", "CAN Bus", "PCB Design", "C"],
+      "Led embedded development for a swerve-drive infantry robot — custom encoder design, gimbal stabilization, omnidirectional chassis control, and power management. Won 1st place at the Southwest Regional and 3rd nationally at RoboMaster 2025.",
+    category: "Competitions",
+    tags: ["STM32H7", "FreeRTOS", "CAN Bus", "PID", "FOC", "C++"],
+    image: "/projects/robomaster_infantry/IMG_20250312_135819.jpg",
+    images: [
+      "/projects/robomaster_infantry/IMG_20250312_135819.jpg",
+      "/projects/robomaster_infantry/20250316-145007.jpg",
+      "/projects/robomaster_infantry/IMG_8531.jpg",
+    ],
+    video: "/projects/robomaster_infantry/Screenrecorder-2025-05-24-18-17-56-313.mp4",
     featured: true,
+    period: "2024.09 – 2025.06",
     details: {
       background:
-        "Robotic joints demand precise, low-speed torque control that off-the-shelf ESCs can't deliver. I needed a compact controller that speaks CAN and fits inside a custom actuator housing.",
-      work: "Wrote the full FOC pipeline — Clarke/Park transforms, PI current loops, SVM generation — running at 20 kHz on a STM32F405. Designed a 4-layer PCB with integrated current sensing and CAN transceiver. Tuned the control loops on a dynamometer rig.",
+        "RoboMaster is a full-contact robot combat competition where teams design, build, and program robots from scratch. I was the embedded lead for our swerve-drive infantry — the most mechanically complex unit on the field, requiring precise omnidirectional movement and a stabilized gimbal that can track targets regardless of chassis orientation.",
+      work: "Designed a layered firmware architecture (APP / Module / BSP) in C++ with full decoupling between application logic, motor/sensor drivers, and peripheral HAL. Built a self-developed hollow-shaft magnetic encoder using the MPS MA600 chip with a field compensation algorithm, achieving <0.1° error. Implemented swerve chassis kinematics with vector decomposition, 1st-order low-pass filtering for smooth high-agility movement, and PID-based current allocation to minimize wheel slip. Developed a gyroscope-closed-loop gimbal with MIT control (position + velocity + feedforward torque in parallel) and variable-speed integration, achieving <100 ms step response to 0.1 rad with near-zero steady-state error on a 2 kg gimbal driven by a 1 Nm direct-drive motor.",
       challenges:
-        "Getting stable current sampling in the presence of switching noise was the hardest part. Ended up redesigning the sense resistor layout twice and adding a hardware blanking window before ADC triggers.",
+        "Wireless debugging was critical for fast iteration on the field. Integrated Ozone + J-Link over LAN via an onboard Linux SBC, enabling non-intrusive parameter tuning without touching the robot. Encoder field compensation required careful characterization of magnetic interference from nearby motors.",
       takeaways:
-        "Deepened my understanding of power electronics and real-time control. The board is now used across three different robot platforms in our lab.",
+        "2025 RoboMaster Super Combat — National 1st Prize (3rd nationally, 1st in Southwest). Alliance Match Southwest — 3rd place (National 2nd Prize).",
     },
   },
   {
-    slug: "robomaster-infantry",
-    title: "RoboMaster Infantry Robot",
+    slug: "robomaster-engineer",
+    title: "RoboMaster 7-DoF Arm Engineer Robot",
     description:
-      "Led embedded development for our team's infantry robot — real-time gimbal control, chassis omnidirectional movement, and a custom shooting system with automatic target tracking.",
+      "Embedded lead for a 7-axis robotic arm engineer robot with mecanum chassis. Built the full control stack from ROS2+MoveIt2 motion planning on the host PC down to real-time joint control on STM32.",
     category: "Competitions",
-    tags: ["STM32", "FreeRTOS", "PID", "CAN", "UART", "Computer Vision"],
+    tags: ["STM32", "ROS2", "MoveIt2", "IKFast", "FreeRTOS", "USB CDC"],
+    image: "/projects/robomaster_engineer/IMG_20250416_000508.jpg",
+    images: [
+      "/projects/robomaster_engineer/IMG_20250416_000508.jpg",
+      "/projects/robomaster_engineer/IMG_8522.jpg",
+    ],
+    video: "/projects/robomaster_engineer/VID_20250423_233416.mp4",
     featured: true,
+    period: "2024.09 – 2025.06",
     details: {
       background:
-        "RoboMaster is a robotics competition where teams build and program robots to compete in real-time battles. The infantry robot is the most versatile unit — it needs to move fast, aim precisely, and react to targets in milliseconds.",
-      work: "Architected the firmware on FreeRTOS with separate tasks for gimbal stabilization (IMU + dual-axis PID at 1 kHz), chassis control (mecanum inverse kinematics), and communication with the vision co-processor over UART. Implemented a referee system protocol parser and an automatic ammo feeder with jam detection.",
+        "The engineer robot must autonomously pick up ore and exchange resources — tasks requiring precise 7-DoF arm control and reliable communication between a high-level planner and a real-time embedded controller.",
+      work: "Implemented USB virtual serial port communication between the STM32 lower computer and the ROS2 upper computer, using ring buffers and DMA double-buffering (ping-pong) for reliable high-throughput data transfer with CRC validation in a dedicated FreeRTOS task. On the upper computer, built a ROS2 + MoveIt2 + KDL arm control module with full simulation in NVIDIA Isaac Sim. Used IKFast (URDF-generated) for inverse kinematics at 4 ms per solve, and KDL for forward kinematics to handle non-Pieper configurations. Built a custom teach pendant using absolute encoders to map controller positions to arm joint targets for high-precision teleoperation and data collection.",
       challenges:
-        "Latency between the vision module's detection and the gimbal response was initially ~80 ms. Reduced it to ~15 ms by switching to DMA-based UART, pre-computing gimbal trajectories, and adding a Kalman predictor for moving targets.",
+        "Coordinating a 7-DoF arm with a moving mecanum chassis required careful frame transforms and latency management. The IKFast solver needed a clean URDF with accurate joint limits to avoid degenerate solutions near singularities.",
       takeaways:
-        "This project taught me how to build reliable real-time systems under extreme time pressure. Our team placed in the regional top 8.",
+        "2025 RoboMaster Super Combat — National 2nd Prize.",
+    },
+  },
+  {
+    slug: "embodied-ai-housework-robot",
+    title: "Embodied AI Housework Robot",
+    description:
+      "Built a mobile manipulation system based on Diffusion Policy and VLA (π0.5) for household tasks. Deployed on a 7-DoF arm + differential drive base, with TeleOp data collection using a single smartphone.",
+    category: "Robotics & Embodied AI",
+    tags: ["Diffusion Policy", "VLA", "ROS1", "Jetson", "RealSense", "Python"],
+    image: "/projects/%E5%85%B7%E8%BA%AB%E6%99%BA%E8%83%BD%E5%AE%B6%E5%8A%A1%E6%9C%BA%E5%99%A8%E4%BA%BA%20%E5%8D%8E%E8%A5%BF%E7%B2%BE%E5%88%9B%E5%8C%BB%E7%96%97%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%EF%BC%88%E5%95%86%E6%B1%A4%E7%A7%91%E6%8A%80-%E5%8D%8E%E8%A5%BF%E5%8C%BB%E9%99%A2%E8%81%94%E5%90%88%E5%AE%9E%E9%AA%8C%E5%AE%A4%EF%BC%89/%E5%AE%B6%E5%8A%A1%E6%9C%BA%E5%99%A8%E4%BA%BA.jpg",
+    images: [
+      "/projects/%E5%85%B7%E8%BA%AB%E6%99%BA%E8%83%BD%E5%AE%B6%E5%8A%A1%E6%9C%BA%E5%99%A8%E4%BA%BA%20%E5%8D%8E%E8%A5%BF%E7%B2%BE%E5%88%9B%E5%8C%BB%E7%96%97%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%EF%BC%88%E5%95%86%E6%B1%A4%E7%A7%91%E6%8A%80-%E5%8D%8E%E8%A5%BF%E5%8C%BB%E9%99%A2%E8%81%94%E5%90%88%E5%AE%9E%E9%AA%8C%E5%AE%A4%EF%BC%89/%E5%AE%B6%E5%8A%A1%E6%9C%BA%E5%99%A8%E4%BA%BA.jpg",
+      "/projects/%E5%85%B7%E8%BA%AB%E6%99%BA%E8%83%BD%E5%AE%B6%E5%8A%A1%E6%9C%BA%E5%99%A8%E4%BA%BA%20%E5%8D%8E%E8%A5%BF%E7%B2%BE%E5%88%9B%E5%8C%BB%E7%96%97%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%EF%BC%88%E5%95%86%E6%B1%A4%E7%A7%91%E6%8A%80-%E5%8D%8E%E8%A5%BF%E5%8C%BB%E9%99%A2%E8%81%94%E5%90%88%E5%AE%9E%E9%AA%8C%E5%AE%A4%EF%BC%89/%E4%BA%BA%E5%BD%A2%E6%9C%BA%E5%99%A8%E4%BA%BA.jpg",
+      "/projects/%E5%85%B7%E8%BA%AB%E6%99%BA%E8%83%BD%E5%AE%B6%E5%8A%A1%E6%9C%BA%E5%99%A8%E4%BA%BA%20%E5%8D%8E%E8%A5%BF%E7%B2%BE%E5%88%9B%E5%8C%BB%E7%96%97%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%EF%BC%88%E5%95%86%E6%B1%A4%E7%A7%91%E6%8A%80-%E5%8D%8E%E8%A5%BF%E5%8C%BB%E9%99%A2%E8%81%94%E5%90%88%E5%AE%9E%E9%AA%8C%E5%AE%A4%EF%BC%89/%E5%AE%9E%E9%AA%8C%E5%9C%BA%E6%99%AF.jpg",
+    ],
+    video: "/projects/%E5%85%B7%E8%BA%AB%E6%99%BA%E8%83%BD%E5%AE%B6%E5%8A%A1%E6%9C%BA%E5%99%A8%E4%BA%BA%20%E5%8D%8E%E8%A5%BF%E7%B2%BE%E5%88%9B%E5%8C%BB%E7%96%97%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%EF%BC%88%E5%95%86%E6%B1%A4%E7%A7%91%E6%8A%80-%E5%8D%8E%E8%A5%BF%E5%8C%BB%E9%99%A2%E8%81%94%E5%90%88%E5%AE%9E%E9%AA%8C%E5%AE%A4%EF%BC%89/%E5%AE%B6%E5%8A%A1%E6%9C%BA%E5%99%A8%E4%BA%BAdemo.mp4",
+    featured: true,
+    period: "2025.11 – Present",
+    details: {
+      background:
+        "Research project at the SenseTime–West China Hospital Joint Lab (Huaxi Jingchuang Medical Technology). The goal: build a mobile manipulation system capable of household tasks like wiping tables and transporting objects, using imitation learning from human demonstrations.",
+      work: "Designed the full system around a Jetson edge compute node, integrating a 1080p 180° fisheye wrist camera and a RealSense depth camera for perception. Visual data streams wirelessly to a remote RTX 2080Ti inference server running Diffusion Policy and VLA (π0.5) models. The Jetson receives inferred actions and controls a Puwei P500 differential drive base (via ROS1 Docker) and a Rokae ER3 Pro 7-DoF arm with a Jodell EPG two-finger gripper. Data collection uses smartphone AR (TeleOp) — a single phone captures full 6-DoF pose for teleoperation and demonstration recording.",
+      challenges:
+        "Closing the perception–decision–execution loop over wireless with acceptable latency required careful pipeline optimization. The fisheye lens introduced significant distortion that needed calibration before feeding into the policy network.",
+      takeaways:
+        "Ongoing research. Currently exploring tactile-augmented diffusion policies for contact-rich assembly tasks, combining high-level action generation with high-frequency tactile residual correction.",
     },
   },
   {
     slug: "electronic-design-contest",
-    title: "National Electronic Design Contest — Signal Generator",
+    title: "National Electronic Design Contest",
     description:
-      "Built a high-precision DDS signal generator with STM32 + DAC, supporting arbitrary waveforms up to 10 MHz with THD below -50 dB.",
+      "Built a complete electronic system from scratch in 4 days for the National Electronic Design Contest. Competed at the provincial level.",
     category: "Competitions",
-    tags: ["STM32", "DDS", "Analog Design", "PCB", "FPGA"],
+    tags: ["STM32", "Analog Design", "PCB", "Signal Processing"],
+    image: "/projects/%E7%94%B5%E8%B5%9B/IMG_20250727_215616.jpg",
+    images: [
+      "/projects/%E7%94%B5%E8%B5%9B/IMG_20250727_215616.jpg",
+      "/projects/%E7%94%B5%E8%B5%9B/IMG_20250802_105951.jpg",
+    ],
+    video: "/projects/%E7%94%B5%E8%B5%9B/video_20240730_200807.mp4",
+    featured: false,
+    period: "2025.07 – 2025.08",
+    details: {
+      background:
+        "The National Electronic Design Contest (全国大学生电子设计竞赛) gives teams four days to design, build, and test a complete electronic system from scratch. It's one of the most demanding undergraduate engineering competitions in China.",
+      work: "Designed and implemented the full system including schematic, PCB layout, firmware, and testing within the competition window. Focused on signal integrity, analog front-end design, and real-time STM32 control.",
+      challenges:
+        "Four days is extremely tight for a complete hardware + firmware system. Prioritizing what to build vs. what to simplify under time pressure is the core skill the competition tests.",
+      takeaways:
+        "Learned to make fast, pragmatic engineering decisions under a hard deadline. The competition sharpened both my hardware intuition and my ability to debug under pressure.",
+    },
+  },
+  {
+    slug: "diy-rc-controller",
+    title: "Open-Source Custom RC Controller",
+    description:
+      "Designed and open-sourced a custom RC transmitter — custom PCB, STM32 firmware, and ergonomic 3D-printed housing.",
+    category: "Hardware / Electronics",
+    tags: ["STM32", "KiCad", "3D Printing", "RF", "Open Source"],
+    image: "/projects/diy%26opensource/%E8%87%AA%E5%B7%B1%E8%AE%BE%E8%AE%A1%E5%BC%80%E6%BA%90%E7%9A%84%E9%81%A5%E6%8E%A7%E5%99%A8.jpg",
+    images: [
+      "/projects/diy%26opensource/%E8%87%AA%E5%B7%B1%E8%AE%BE%E8%AE%A1%E5%BC%80%E6%BA%90%E7%9A%84%E9%81%A5%E6%8E%A7%E5%99%A8.jpg",
+    ],
     featured: false,
     details: {
       background:
-        "The National Electronic Design Contest gives teams four days to design, build, and test an electronic system from scratch. Our topic required generating clean, arbitrary waveforms with strict spectral purity requirements.",
-      work: "Implemented a DDS core on STM32H7 driving a 14-bit DAC at 100 MSPS through an FPGA-based interpolation stage. Designed a 6th-order elliptic reconstruction filter and a programmable output amplifier. Wrote a simple UI on a TFT screen for waveform selection and parameter tuning.",
+        "Off-the-shelf RC controllers are either too expensive, too limited, or both. I wanted a transmitter I could fully customize — hardware, firmware, and form factor — and share with others.",
+      work: "Designed the PCB in KiCad around an STM32 microcontroller with hall-effect gimbals, custom switch layout, and a compact RF module. Wrote firmware from scratch with configurable channel mapping and protocol support. Modeled and 3D-printed the housing for a comfortable grip.",
       challenges:
-        "Meeting the THD spec at higher frequencies required careful PCB layout — separating analog and digital grounds, using short traces to the DAC output, and adding proper decoupling. We went through three board revisions in two days.",
+        "RF noise from the STM32 clock harmonics required careful PCB layout and shielding around the RF module. Getting the gimbal feel right took several iterations of spring tension and mechanical travel adjustment.",
       takeaways:
-        "Learned to make fast, pragmatic engineering decisions under a hard deadline. Won provincial first prize.",
-    },
-  },
-  {
-    slug: "robot-arm-embodied-ai",
-    title: "Embodied AI — 6-DoF Robotic Arm Manipulation",
-    description:
-      "Exploring vision-language-action models for robotic manipulation. Training a 6-DoF arm to perform pick-and-place tasks from natural language instructions and RGB-D input.",
-    category: "Robotics & Embodied AI",
-    tags: ["Python", "PyTorch", "ROS2", "VLA", "Sim-to-Real"],
-    featured: true,
-    details: {
-      background:
-        "Embodied AI aims to give robots the ability to understand and act in the physical world. I'm investigating how vision-language-action (VLA) models can enable a robot arm to follow open-ended instructions without task-specific programming.",
-      work: "Set up a sim-to-real pipeline: training in Isaac Sim with domain randomization, then deploying on a real 6-DoF arm with RealSense depth cameras. Fine-tuning a VLA model on our collected demonstration data. Building the ROS2 control stack for real-time inference and execution.",
-      challenges:
-        "The sim-to-real gap is real — policies that work perfectly in simulation often fail on hardware due to calibration errors, latency, and visual domain shift. Currently experimenting with better domain randomization and a small amount of real-world fine-tuning.",
-      takeaways:
-        "This is ongoing research. It's pushing me to understand both the ML side (transformers, imitation learning) and the systems side (real-time control, sensor fusion) deeply.",
-    },
-  },
-  {
-    slug: "vision-tracking-turret",
-    title: "Auto-Tracking Turret with Computer Vision",
-    description:
-      "A pan-tilt turret that detects and tracks colored targets in real time using OpenCV on a Jetson Nano, with STM32 handling the servo control loop.",
-    category: "Robotics & Embodied AI",
-    tags: ["Jetson Nano", "OpenCV", "STM32", "PID", "Python", "C"],
-    details: {
-      background:
-        "Built as a testbed for vision-guided aiming systems. The goal was sub-100ms detection-to-actuation latency with smooth tracking on moving targets.",
-      work: "Ran a lightweight HSV-based detection pipeline on the Jetson Nano at 60 FPS, sending target coordinates to an STM32 over serial. The STM32 runs cascaded PID loops for the pan and tilt servos. Added a Kalman filter for target prediction during brief occlusions.",
-      challenges:
-        "Lighting changes caused the HSV thresholds to break constantly. Solved it with an adaptive calibration routine that runs on startup and adjusts thresholds based on ambient light measured by the camera's auto-exposure metadata.",
-      takeaways:
-        "Good exercise in heterogeneous system design — splitting compute between a Linux SBC and a microcontroller based on latency and determinism requirements.",
-    },
-  },
-  {
-    slug: "custom-mechanical-keyboard",
-    title: "Custom Split Mechanical Keyboard",
-    description:
-      "Designed a split ergonomic keyboard from scratch — custom PCB with STM32, hot-swap sockets, RGB underglow, and QMK firmware with custom keymaps.",
-    category: "Hardware / Electronics",
-    tags: ["STM32", "KiCad", "QMK", "PCB Design", "3D Printing"],
-    details: {
-      background:
-        "Wanted a keyboard that fits my workflow — split layout for ergonomics, programmable layers for embedded development shortcuts, and a compact form factor for my desk setup.",
-      work: "Designed the schematic and PCB in KiCad with an STM32F072 (native USB, no crystal needed). Added per-key RGB LEDs, hot-swap sockets, and a USB-C interconnect between halves. 3D-printed the case in resin for a clean finish. Wrote custom QMK layers optimized for C development and terminal navigation.",
-      challenges:
-        "Routing a split keyboard PCB with RGB and hot-swap is tight. Had to go to 4 layers and carefully manage the ground plane under the USB data lines to pass compliance.",
-      takeaways:
-        "A fun project that combined PCB design, firmware, mechanical design, and 3D printing. I use it every day.",
-    },
-  },
-  {
-    slug: "smart-plant-monitor",
-    title: "IoT Plant Monitoring System",
-    description:
-      "An ESP32-based sensor node that monitors soil moisture, light, and temperature, pushing data to a self-hosted dashboard via MQTT.",
-    category: "Hardware / Electronics",
-    tags: ["ESP32", "MQTT", "Sensors", "3D Printing", "IoT"],
-    details: {
-      background:
-        "I kept forgetting to water my plants. Rather than set a reminder like a normal person, I built a monitoring system.",
-      work: "Designed a compact sensor board around the ESP32-C3 with capacitive soil moisture, ambient light, and temperature/humidity sensors. Runs on a LiPo with solar charging, sleeping most of the time and waking every 15 minutes to take readings and publish over MQTT. The dashboard runs on a Raspberry Pi with Grafana.",
-      challenges:
-        "Getting reliable soil moisture readings required calibrating the capacitive sensor for different soil types and pot sizes. Also had to optimize deep sleep current draw to get reasonable battery life with the small solar panel.",
-      takeaways:
-        "A satisfying end-to-end IoT project — hardware, firmware, networking, and visualization. The plants are doing better now.",
+        "Open-sourced the design. A good exercise in making something polished enough that others can actually use it.",
     },
   },
 ];
