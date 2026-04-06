@@ -25,7 +25,7 @@ export const hobbiesZh: Hobby[] = [
       "/life/%E9%AA%91%E8%A1%8C/IMG_20231003_122114.jpg",
       "/life/%E9%AA%91%E8%A1%8C/IMG_20250914_113423.jpg",
       "/life/%E9%AA%91%E8%A1%8C/IMG_20260304_124259.jpg",
-      "/life/%E9%AA%91%E8%A1%8C/1757863797439.jpg",
+
       "/life/%E9%AA%91%E8%A1%8C/Image_1757826870437.jpg",
     ],
   },

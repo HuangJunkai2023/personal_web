@@ -115,6 +115,7 @@ export const projects: Project[] = [
       "/projects/%E7%94%B5%E8%B5%9B/IMG_20250727_215616.jpg",
       "/projects/%E7%94%B5%E8%B5%9B/IMG_20250802_105951.jpg",
     ],
+    video: "/projects/%E7%94%B5%E8%B5%9B/1775487820166_COMPRESSED.mp4",
     video: "/projects/%E7%94%B5%E8%B5%9B/video_20240730_200807.mp4",
     featured: false,
     period: "2025.07 – 2025.08",
