@@ -135,7 +135,7 @@ export const projects: Project[] = [
       "Designed and open-sourced a custom RC transmitter — custom PCB, STM32 firmware, and ergonomic 3D-printed housing.",
     category: "Hardware / Electronics",
     tags: ["STM32", "KiCad", "3D Printing", "RF", "Open Source"],
-    image: "/projects/diy%26opensource/%E8%87%AA%E5%B7%B1%E8%AE%BE%E8%AE%A1%E5%BC%80%E6%BA%90%E7%9A%84%E9%81%A5%E6%8E%A7%E5%99%A8.jpg",
+    image: "/projects/opensource/%E8%87%AA%E5%B7%B1%E8%AE%BE%E8%AE%A1%E5%BC%80%E6%BA%90%E7%9A%84%E9%81%A5%E6%8E%A7%E5%99%A8.jpg",
     images: [
       "/projects/opensource/%E8%87%AA%E5%B7%B1%E8%AE%BE%E8%AE%A1%E5%BC%80%E6%BA%90%E7%9A%84%E9%81%A5%E6%8E%A7%E5%99%A8.jpg",
     ],

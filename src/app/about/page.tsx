@@ -161,11 +161,13 @@ export default function AboutPage() {
     "I'm Junkai Huang, a junior at Southwest Jiaotong University (211) studying Electronic Information Engineering — GPA 3.73/4.0 (91.65, ranked 18/81). President of the university robotics association, and embedded lead for the RoboMaster competition team.",
     "My work sits at the intersection of real-time embedded systems and embodied AI. On the hardware side, I build firmware for STM32 microcontrollers, design PCBs, and develop motor control systems. On the AI side, I train and deploy vision-language-action models on real robot hardware — from data collection to sim-to-real transfer to edge deployment on RK3588.",
     "I've published an EI conference paper as first author, co-authored a CCF-B paper, filed an invention patent, and won 9 national-level competition awards including a RoboMaster National 1st Prize.",
+    "ISTJ-T — systematic, detail-oriented, and allergic to half-finished work.",
   ];
   const introZh = [
     "我是黄俊凯，西南交通大学（211）电子信息工程专业大三学生，GPA 3.73/4.0（91.65，排名 18/81）。现任校机器人协会会长，RoboMaster 竞赛队嵌入式电控负责人。",
     "我的工作处于实时嵌入式系统与具身智能的交叉点。硬件侧，我为 STM32 微控制器编写固件、设计 PCB、开发电机控制系统；AI 侧，我在真实机器人硬件上训练和部署视觉-语言-动作模型——从数据采集到 Sim-to-Real 迁移，再到 RK3588 边缘部署。",
     "已以第一作者发表 EI 会议论文一篇，参与发表 CCF-B 论文一篇，申请发明专利一项，获国家级学科竞赛奖项 9 项，其中包括 RoboMaster 全国一等奖。",
+    "ISTJ-T — 系统性思维，注重细节，对半途而废过敏。",
   ];
   const intro = lang === "zh" ? introZh : introEn;
 
