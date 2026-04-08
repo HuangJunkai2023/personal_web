@@ -47,6 +47,15 @@ export default function HobbyCard({ hobby, index = 0 }: { hobby: Hobby; index?: 
         <h3 className="text-lg font-semibold text-neutral-900 dark:text-white">{hobby.title}</h3>
         <p className="mt-1 text-sm italic text-neutral-400">{hobby.tagline}</p>
         <p className="mt-3 text-sm text-neutral-500 leading-relaxed">{hobby.description}</p>
+        {hobby.links && hobby.links.length > 0 && (
+          <div className="mt-4 flex flex-col gap-2">
+            {hobby.links.map((l) => (
+              <a key={l.href} href={l.href} target="_blank" rel="noopener noreferrer" className="text-sm text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white underline underline-offset-2 transition-colors">
+                {l.label} ↗
+              </a>
+            ))}
+          </div>
+        )}
       </div>
     </motion.div>
   );

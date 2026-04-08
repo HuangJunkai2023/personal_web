@@ -112,19 +112,46 @@ export const projectsZh: Project[] = [
       "从零设计并开源了一款自定义 RC 发射器——自制 PCB、STM32 固件与人体工学 3D 打印外壳。",
     category: "硬件 / 电子",
     tags: ["STM32", "KiCad", "3D打印", "RF", "开源"],
-    image: "/projects/diy%26opensource/%E8%87%AA%E5%B7%B1%E8%AE%BE%E8%AE%A1%E5%BC%80%E6%BA%90%E7%9A%84%E9%81%A5%E6%8E%A7%E5%99%A8.jpg",
+    image: "/projects/opensource/%E8%87%AA%E5%B7%B1%E8%AE%BE%E8%AE%A1%E5%BC%80%E6%BA%90%E7%9A%84%E9%81%A5%E6%8E%A7%E5%99%A8.jpg",
     images: [
-      "/projects/diy%26opensource/%E8%87%AA%E5%B7%B1%E8%AE%BE%E8%AE%A1%E5%BC%80%E6%BA%90%E7%9A%84%E9%81%A5%E6%8E%A7%E5%99%A8.jpg",
+      "/projects/opensource/%E8%87%AA%E5%B7%B1%E8%AE%BE%E8%AE%A1%E5%BC%80%E6%BA%90%E7%9A%84%E9%81%A5%E6%8E%A7%E5%99%A8.jpg",
     ],
     featured: false,
     details: {
       background:
         "市售遥控器要么太贵，要么功能受限，要么两者兼有。我想要一款可以完全自定义的发射器——硬件、固件、外形都由自己掌控，并分享给其他人。",
-      work: "在 KiCad 中围绕 STM32 微控制器设计 PCB，配备霍尔效应摇杆、自定义开关布局和紧凑型 RF 模块。从零编写固件，支持可配置通道映射和协议。建模并 3D 打印外壳，追求舒适握感。",
+      work: "在 KiCad 中围绕 STM32F103C8T6 设计 PCB，配备霍尔效应摇杆、自定义开关布局和 2.4G RF 模块。板子尺寸 10×15cm，可在捷配免费打样。充电模块支持 18W 快充。固件和硬件已在 GitHub 开源（442827947/diy_rc）。硬件参考：oshwhub.com/bgbdm/yao-kong-qi。",
       challenges:
         "STM32 时钟谐波产生的 RF 噪声需要精细的 PCB 布局和 RF 模块周围的屏蔽处理。摇杆手感调整经历了多次弹簧张力和机械行程的迭代。",
       takeaways:
-        "已开源设计。这是一次让作品足够完善到他人可以实际使用的好练习。",
+        "已完整开源设计。这是一次让作品足够完善到他人可以实际使用的好练习。",
+    },
+  },
+  {
+    slug: "pi0-vla-reproduction",
+    title: "π0 VLA 实机复现",
+    description:
+      "三个月内从零开始学习 VLA，从零搭建机械臂和夹爪，搭场景、采数据、微调、部署一气呵成。",
+    category: "机器人与具身智能",
+    tags: ["π0", "VLA", "LoRA", "LeRobot", "ROS", "Isaac Sim"],
+    image: "/projects/pi0%E5%A4%8D%E7%8E%B0/1775658319626.jpg",
+    images: [
+      "/projects/pi0%E5%A4%8D%E7%8E%B0/1775658319626.jpg",
+      "/projects/pi0%E5%A4%8D%E7%8E%B0/1775658319639.jpg",
+      "/projects/pi0%E5%A4%8D%E7%8E%B0/796591234f2b8c8f4dd20f9dbb803c14.png",
+      "/projects/pi0%E5%A4%8D%E7%8E%B0/Image_1765782191320.png",
+    ],
+    video: "/projects/pi0%E5%A4%8D%E7%8E%B0/Video_1763047404965.mp4",
+    featured: true,
+    period: "2025.07 – 2025.12",
+    details: {
+      background:
+        "π0 是目前最先进的机器人操作视觉-语言-动作模型之一。我想在真实硬件上完整复现它——不只是跑预训练权重的推理，而是走完从硬件搭建到部署的全流程。",
+      work: "从零搭建机械臂和夹爪，设计实验场景，采集 100+ 条示教数据。制作 LeRobot 格式数据集，对 π0 模型进行 LoRA 微调，在 Isaac Sim 仿真验证后通过 TCP 连接实机部署。语音转文字 + 相机输入 → ΔJoint 输出（六轴+夹爪）。",
+      challenges:
+        "三个月内同时从零学习 VLA 并搭建硬件是最大的挑战。Sim-to-Real 差距和数据质量是最核心的技术难点——示教数据中的小误差在策略执行时会快速放大。",
+      takeaways:
+        "验证了一个人可以在三个月内从零搭建出可运行的 VLA 系统。整个流程——硬件、数据、训练、部署——现在都可以快速迭代。",
     },
   },
 ];

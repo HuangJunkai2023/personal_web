@@ -1,0 +1,3 @@
+https://oshwhub.com/bgbdm/yao-kong-qi
+
+基于stm32f103c8t6的2.4g遥控器，硬件零件有部分参考https://oshwhub.com/bukaiyuan/ESP32-hang-mu-yao-kong-qi的作品，板子大小10cm*15cm，可在捷配免费打样，充电模块可实现18w快充，代码可在442827947/diy_rc (github.com)查看

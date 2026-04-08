@@ -4,6 +4,7 @@ export interface Hobby {
   tagline: string;
   description: string;
   images?: string[];
+  links?: { label: string; href: string }[];
 }
 
 export const hobbies: Hobby[] = [
@@ -78,5 +79,35 @@ export const hobbies: Hobby[] = [
       "/life/3d%E6%89%93%E5%8D%B0/3d%E6%89%93%E5%8D%B0%E4%BB%B6.jpg",
       "/life/3d%E6%89%93%E5%8D%B0/3d%E6%89%93%E5%8D%B0%E6%91%84%E5%83%8F%E5%A4%B4%E5%9B%BA%E5%AE%9A.jpg",
     ],
+  },
+  {
+    id: "pc-building",
+    title: "PC Building & Modding",
+    tagline: "Salvaging E5 CPUs and flashing 2080 Ti BIOSes for fun.",
+    description:
+      "Building and modding PCs is where hardware meets obsession. I've assembled systems from scratch, swapped coolers, upgraded components, and gone deep into the secondhand market — picking up Xeon E5 CPUs and modding a 2080 Ti to 22GB VRAM. If it has a heatsink, I've probably taken it apart.",
+    images: [
+      "/life/%E7%94%B5%E8%84%91%E8%BF%B7/IMG_20230705_151328.jpg",
+      "/life/%E7%94%B5%E8%84%91%E8%BF%B7/IMG_20230803_092936.jpg",
+      "/life/%E7%94%B5%E8%84%91%E8%BF%B7/IMG_20230803_173758.jpg",
+      "/life/%E7%94%B5%E8%84%91%E8%BF%B7/IMG_20241213_141508.jpg",
+      "/life/%E7%94%B5%E8%84%91%E8%BF%B7/IMG_20250225_233455.jpg",
+      "/life/%E7%94%B5%E8%84%91%E8%BF%B7/IMG_20250612_113059.jpg",
+      "/life/%E7%94%B5%E8%84%91%E8%BF%B7/IMG_20260104_151305.jpg",
+      "/life/%E7%94%B5%E8%84%91%E8%BF%B7/IMG_20260105_113005.jpg",
+      "/life/%E7%94%B5%E8%84%91%E8%BF%B7/IMG_20260108_093133.jpg",
+    ],
+  },
+  {
+    id: "video-editing",
+    title: "Video Editing",
+    tagline: "Cutting footage, not corners.",
+    description:
+      "I edit videos for the robotics team — recruitment films, competition highlights, and behind-the-scenes content. Using Premiere Pro and After Effects to tell the story of what we build.",
+    links: [
+      { label: "SWJTU RoboMaster 2025 Recruitment — Part 1", href: "https://www.bilibili.com/video/BV1KkbMzZEWV/?p=1" },
+      { label: "SWJTU RoboMaster 2025 Recruitment — Part 2", href: "https://www.bilibili.com/video/BV1KkbMzZEWV/?p=2" },
+    ],
+    images: ["/life/%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91/1743434103739.jpg"],
   },
 ];

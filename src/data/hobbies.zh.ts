@@ -71,4 +71,34 @@ export const hobbiesZh: Hobby[] = [
       "/life/3d%E6%89%93%E5%8D%B0/3d%E6%89%93%E5%8D%B0%E6%91%84%E5%83%8F%E5%A4%B4%E5%9B%BA%E5%AE%9A.jpg",
     ],
   },
+  {
+    id: "pc-building",
+    title: "电脑迷",
+    tagline: "捡垃圾 E5、魔改 2080Ti，乐此不疲。",
+    description:
+      "配电脑、装系统、改装散热、升级配件是我的日常消遣。从零组装整机、换散热器、捡垃圾 E5 CPU、把 2080Ti 魔改到 22GB 显存——只要有散热片的东西，我大概都拆过。",
+    images: [
+      "/life/%E7%94%B5%E8%84%91%E8%BF%B7/IMG_20230705_151328.jpg",
+      "/life/%E7%94%B5%E8%84%91%E8%BF%B7/IMG_20230803_092936.jpg",
+      "/life/%E7%94%B5%E8%84%91%E8%BF%B7/IMG_20230803_173758.jpg",
+      "/life/%E7%94%B5%E8%84%91%E8%BF%B7/IMG_20241213_141508.jpg",
+      "/life/%E7%94%B5%E8%84%91%E8%BF%B7/IMG_20250225_233455.jpg",
+      "/life/%E7%94%B5%E8%84%91%E8%BF%B7/IMG_20250612_113059.jpg",
+      "/life/%E7%94%B5%E8%84%91%E8%BF%B7/IMG_20260104_151305.jpg",
+      "/life/%E7%94%B5%E8%84%91%E8%BF%B7/IMG_20260105_113005.jpg",
+      "/life/%E7%94%B5%E8%84%91%E8%BF%B7/IMG_20260108_093133.jpg",
+    ],
+  },
+  {
+    id: "video-editing",
+    title: "视频剪辑",
+    tagline: "用镜头讲述我们造的东西。",
+    description:
+      "为机器人队剪辑视频——招新宣传片、比赛集锦、幕后花絮。用 Premiere Pro 和 After Effects 把我们做的东西讲成一个故事。",
+    links: [
+      { label: "西南交大 RM 机甲大师 2025 招新 · 上篇", href: "https://www.bilibili.com/video/BV1KkbMzZEWV/?p=1" },
+      { label: "西南交大 RM 机甲大师 2025 招新 · 下篇", href: "https://www.bilibili.com/video/BV1KkbMzZEWV/?p=2" },
+    ],
+    images: ["/life/%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91/1743434103739.jpg"],
+  },
 ];

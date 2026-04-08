@@ -137,17 +137,44 @@ export const projects: Project[] = [
     tags: ["STM32", "KiCad", "3D Printing", "RF", "Open Source"],
     image: "/projects/diy%26opensource/%E8%87%AA%E5%B7%B1%E8%AE%BE%E8%AE%A1%E5%BC%80%E6%BA%90%E7%9A%84%E9%81%A5%E6%8E%A7%E5%99%A8.jpg",
     images: [
-      "/projects/diy%26opensource/%E8%87%AA%E5%B7%B1%E8%AE%BE%E8%AE%A1%E5%BC%80%E6%BA%90%E7%9A%84%E9%81%A5%E6%8E%A7%E5%99%A8.jpg",
+      "/projects/opensource/%E8%87%AA%E5%B7%B1%E8%AE%BE%E8%AE%A1%E5%BC%80%E6%BA%90%E7%9A%84%E9%81%A5%E6%8E%A7%E5%99%A8.jpg",
     ],
     featured: false,
     details: {
       background:
         "Off-the-shelf RC controllers are either too expensive, too limited, or both. I wanted a transmitter I could fully customize — hardware, firmware, and form factor — and share with others.",
-      work: "Designed the PCB in KiCad around an STM32 microcontroller with hall-effect gimbals, custom switch layout, and a compact RF module. Wrote firmware from scratch with configurable channel mapping and protocol support. Modeled and 3D-printed the housing for a comfortable grip.",
+      work: "Designed the PCB in KiCad around an STM32F103C8T6 with hall-effect gimbals, custom switch layout, and a 2.4G RF module. Board size 10×15cm, free to order at JLCPCB. Charging module supports 18W fast charge. Firmware and hardware open-sourced on GitHub (442827947/diy_rc). Hardware reference: oshwhub.com/bgbdm/yao-kong-qi.",
       challenges:
         "RF noise from the STM32 clock harmonics required careful PCB layout and shielding around the RF module. Getting the gimbal feel right took several iterations of spring tension and mechanical travel adjustment.",
       takeaways:
-        "Open-sourced the design. A good exercise in making something polished enough that others can actually use it.",
+        "Open-sourced the full design. A good exercise in making something polished enough that others can actually use it.",
+    },
+  },
+  {
+    slug: "pi0-vla-reproduction",
+    title: "π0 VLA Real-Robot Reproduction",
+    description:
+      "Reproduced the π0 vision-language-action model on a real robot arm from scratch in 3 months — built the arm, collected data, fine-tuned, and deployed end-to-end.",
+    category: "Robotics & Embodied AI",
+    tags: ["π0", "VLA", "LoRA", "LeRobot", "ROS", "Isaac Sim"],
+    image: "/projects/pi0%E5%A4%8D%E7%8E%B0/1775658319626.jpg",
+    images: [
+      "/projects/pi0%E5%A4%8D%E7%8E%B0/1775658319626.jpg",
+      "/projects/pi0%E5%A4%8D%E7%8E%B0/1775658319639.jpg",
+      "/projects/pi0%E5%A4%8D%E7%8E%B0/796591234f2b8c8f4dd20f9dbb803c14.png",
+      "/projects/pi0%E5%A4%8D%E7%8E%B0/Image_1765782191320.png",
+    ],
+    video: "/projects/pi0%E5%A4%8D%E7%8E%B0/Video_1763047404965.mp4",
+    featured: true,
+    period: "2025.07 – 2025.12",
+    details: {
+      background:
+        "π0 is a state-of-the-art vision-language-action model for robotic manipulation. I wanted to reproduce it on real hardware — not just run inference on a pre-trained checkpoint, but go through the full pipeline from hardware assembly to deployment.",
+      work: "Built the robot arm and gripper setup from scratch, designed the scene, and collected 100+ teleoperation demonstrations. Built a LeRobot-format dataset, LoRA fine-tuned the π0 model, and deployed via TCP connection after Isaac Sim validation. Voice-to-text + camera input → ΔJoint output (6-axis + gripper).",
+      challenges:
+        "Learning VLA from zero while simultaneously building hardware in 3 months was the main challenge. Sim-to-real gap and data quality were the biggest technical hurdles — small errors in demonstration data compound quickly during policy rollout.",
+      takeaways:
+        "Proved that a single person can go from zero to a working VLA system in 3 months. The full pipeline — hardware, data, training, deployment — is now something I can iterate on quickly.",
     },
   },
 ];
