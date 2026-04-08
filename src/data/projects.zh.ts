@@ -154,4 +154,37 @@ export const projectsZh: Project[] = [
         "验证了一个人可以在三个月内从零搭建出可运行的 VLA 系统。整个流程——硬件、数据、训练、部署——现在都可以快速迭代。",
     },
   },
+  {
+    slug: "diy-electronics-3dprint",
+    title: "DIY 嵌入式与 3D 打印项目",
+    description:
+      "个人硬件作品集——自制 PCB、3D 打印外壳、嵌入式小玩意，以及各种出于兴趣或实际需求做的电子项目。",
+    category: "硬件 / 电子",
+    tags: ["STM32", "ESP32", "KiCad", "3D打印", "Fusion 360", "DIY"],
+    image: "/projects/diy/IMG_20240410_232605.jpg",
+    images: [
+      "/projects/diy/IMG_20240410_232605.jpg",
+      "/projects/diy/IMG_20240412_193340.jpg",
+      "/projects/diy/IMG_20240917_141415.jpg",
+      "/projects/diy/IMG_20250226_160547.jpg",
+      "/projects/diy/IMG_20250311_191008.jpg",
+      "/projects/diy/IMG_20250322_145230.jpg",
+      "/projects/diy/IMG_20250416_155716.jpg",
+      "/projects/diy/IMG_20250604_201232.jpg",
+      "/projects/diy/IMG_20250615_143209.jpg",
+      "/projects/diy/IMG_20250618_110445.jpg",
+      "/projects/diy/IMG_20250618_133552.jpg",
+    ],
+    video: "/projects/diy/1775659923185_COMPRESSED.mp4",
+    featured: false,
+    details: {
+      background:
+        "不是每个项目都需要参加竞赛或发论文。很多最好的学习发生在你只是因为想做而去做的时候——一个自定义小工具、一个 3D 打印固定件、一块解决特定问题的 PCB。",
+      work: "一系列嵌入式硬件项目的合集：用 KiCad 设计的自制 PCB、基于 STM32 和 ESP32 的各种小设备、用 Fusion 360 建模并 3D 打印的外壳和机械零件。每个项目都从一个问题或好奇心出发，最终变成桌上的一个实物。",
+      challenges:
+        "DIY 项目有一种独特的挑战：没有规格书、没有截止日期、没有团队。决定什么时候'够好了'然后继续下一个，比听起来要难。",
+      takeaways:
+        "这些项目是我自由实验的地方——尝试新元件、验证想法、积累直觉，这些都会反哺到更正式的工作中。",
+    },
+  },
 ];

@@ -177,4 +177,37 @@ export const projects: Project[] = [
         "Proved that a single person can go from zero to a working VLA system in 3 months. The full pipeline — hardware, data, training, deployment — is now something I can iterate on quickly.",
     },
   },
+  {
+    slug: "diy-electronics-3dprint",
+    title: "DIY Electronics & 3D Printing Projects",
+    description:
+      "A collection of personal hardware builds — custom PCBs, 3D-printed enclosures, embedded gadgets, and various electronics projects built for fun and practical use.",
+    category: "Hardware / Electronics",
+    tags: ["STM32", "ESP32", "KiCad", "3D Printing", "Fusion 360", "DIY"],
+    image: "/projects/diy/IMG_20240410_232605.jpg",
+    images: [
+      "/projects/diy/IMG_20240410_232605.jpg",
+      "/projects/diy/IMG_20240412_193340.jpg",
+      "/projects/diy/IMG_20240917_141415.jpg",
+      "/projects/diy/IMG_20250226_160547.jpg",
+      "/projects/diy/IMG_20250311_191008.jpg",
+      "/projects/diy/IMG_20250322_145230.jpg",
+      "/projects/diy/IMG_20250416_155716.jpg",
+      "/projects/diy/IMG_20250604_201232.jpg",
+      "/projects/diy/IMG_20250615_143209.jpg",
+      "/projects/diy/IMG_20250618_110445.jpg",
+      "/projects/diy/IMG_20250618_133552.jpg",
+    ],
+    video: "/projects/diy/1775659923185_COMPRESSED.mp4",
+    featured: false,
+    details: {
+      background:
+        "Not every project needs to be a competition entry or research paper. Some of the best learning happens when you're building something just because you want to — a custom gadget, a 3D-printed fixture, a PCB for a specific problem.",
+      work: "A mix of embedded hardware projects: custom PCBs designed in KiCad, STM32 and ESP32-based gadgets, 3D-printed enclosures and mechanical parts modeled in Fusion 360. Each project starts with a problem or curiosity and ends with something physical on the desk.",
+      challenges:
+        "DIY projects have a unique challenge: no spec, no deadline, no team. Deciding when something is 'done enough' and moving on is harder than it sounds.",
+      takeaways:
+        "These projects are where I experiment freely — trying new components, testing ideas, and building intuition that feeds back into more serious work.",
+    },
+  },
 ];
