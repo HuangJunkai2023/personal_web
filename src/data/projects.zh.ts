@@ -1,6 +1,6 @@
 import type { Project } from "./projects";
 
-export const categoriesZh = ["全部", "嵌入式系统", "竞赛", "机器人与具身智能", "硬件 / 电子"] as const;
+export const categoriesZh = ["全部", "嵌入式系统", "竞赛", "机器人与具身智能", "硬件 / 电子", "Web 开发"] as const;
 
 export const projectsZh: Project[] = [
   {
@@ -152,6 +152,25 @@ export const projectsZh: Project[] = [
         "三个月内同时从零学习 VLA 并搭建硬件是最大的挑战。Sim-to-Real 差距和数据质量是最核心的技术难点——示教数据中的小误差在策略执行时会快速放大。",
       takeaways:
         "验证了一个人可以在三个月内从零搭建出可运行的 VLA 系统。整个流程——硬件、数据、训练、部署——现在都可以快速迭代。",
+    },
+  },
+  {
+    slug: "personal-website",
+    title: "个人作品集网站",
+    description:
+      "使用 Next.js 16、React 19、TypeScript 与 Tailwind CSS v4 从零设计并搭建的个人作品集网站。支持中英双语、暗色模式、framer-motion 页面动效，以及带有图片画廊和视频展示的项目详情页。",
+    category: "Web 开发",
+    tags: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    featured: false,
+    period: "2026.05",
+    details: {
+      background:
+        "我希望有一个地方能集中展示自己的项目、生活和背景——比静态简历更干净、更灵活。自己动手做也是一次机会，让我在嵌入式与机器人之外，亲身体验一下现代 React/Next.js 技术栈。",
+      work: "基于 Next.js 16（App Router）、React 19 和 TypeScript 构建。样式使用 Tailwind CSS v4，配合 framer-motion 实现页面切换动效。通过语言 Context 实现完整的中英双语支持——所有板块（项目、生活、关于、联系）都从带类型的数据源中分别渲染两种语言。实现了带图片画廊和视频播放的动态项目详情路由、项目页的分类筛选，以及响应式暗色模式布局。",
+      challenges:
+        "在不重复类型定义的前提下保持中英数据结构一致——通过共用 Project 类型解决。处理 /public 目录下中文文件夹的 URL 编码路径，让 next/image 正确加载，需要一些细节处理。",
+      takeaways:
+        "完整地把一个小而真实的 Next.js 项目从零做到上线，是我日常固件工作之外的一次有益尝试。这个网站现在很容易扩展——新增一个项目只需要在两个数据文件中各加一条。",
     },
   },
   {

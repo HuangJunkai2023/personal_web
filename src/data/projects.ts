@@ -23,6 +23,7 @@ export const categories = [
   "Competitions",
   "Robotics & Embodied AI",
   "Hardware / Electronics",
+  "Web Development",
 ] as const;
 
 export const projects: Project[] = [
@@ -175,6 +176,25 @@ export const projects: Project[] = [
         "Learning VLA from zero while simultaneously building hardware in 3 months was the main challenge. Sim-to-real gap and data quality were the biggest technical hurdles — small errors in demonstration data compound quickly during policy rollout.",
       takeaways:
         "Proved that a single person can go from zero to a working VLA system in 3 months. The full pipeline — hardware, data, training, deployment — is now something I can iterate on quickly.",
+    },
+  },
+  {
+    slug: "personal-website",
+    title: "Personal Portfolio Website",
+    description:
+      "Designed and built this personal portfolio site from scratch with Next.js 16, React 19, TypeScript, and Tailwind CSS v4. Features bilingual (EN/ZH) content, dark mode, framer-motion animations, and project detail pages with image galleries and video embeds.",
+    category: "Web Development",
+    tags: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    featured: false,
+    period: "2026.05",
+    details: {
+      background:
+        "I wanted a single place to showcase my projects, hobbies, and background — something cleaner and more flexible than a static resume. Building it myself also gave me a chance to get hands-on with the modern React/Next.js stack outside of my usual embedded and robotics work.",
+      work: "Built the site on Next.js 16 (App Router) with React 19 and TypeScript. Styled with Tailwind CSS v4 and added page transitions with framer-motion. Implemented a language context for full EN/ZH bilingual support — every section (projects, life, about, contact) renders from typed data sources in both languages. Added a dynamic project detail route with image galleries and video playback, a category filter on the projects page, and a responsive dark-mode-aware layout.",
+      challenges:
+        "Keeping the EN and ZH data structures in sync without duplicating type definitions — solved by sharing the Project type across both files. Handling URL-encoded asset paths for Chinese folder names in /public required some care to keep next/image happy.",
+      takeaways:
+        "Shipping a small but real Next.js project end-to-end was a useful counterbalance to my usual firmware work. The site is easy to extend — adding a new project is just one entry in two data files.",
     },
   },
   {
