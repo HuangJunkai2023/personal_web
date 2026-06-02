@@ -7,6 +7,7 @@ export interface Project {
   image?: string;
   images?: string[];
   video?: string;
+  videos?: string[];
   featured?: boolean;
   period?: string;
   details: {
@@ -39,6 +40,23 @@ export const projects: Project[] = [
       "/projects/robomaster_infantry/IMG_20250312_135819.jpg",
       "/projects/robomaster_infantry/20250316-145007.jpg",
       "/projects/robomaster_infantry/IMG_8531.jpg",
+      "/projects/robomaster_infantry/IMG_20250524_175125.jpg",
+      "/projects/robomaster_infantry/Image_1721886525170.jpg",
+      "/projects/robomaster_infantry/Screenshot_2025-05-24-18-23-44-250_com.microsoft..jpg",
+      "/projects/robomaster_infantry/1742830148818.jpg",
+      "/projects/robomaster_infantry/1780125491872.jpg",
+      "/projects/robomaster_infantry/1780125491881.jpg",
+      "/projects/robomaster_infantry/1780125561452.jpg",
+      "/projects/robomaster_infantry/1780125561523.jpg",
+      "/projects/robomaster_infantry/1780125561557.jpg",
+      "/projects/robomaster_infantry/1780125617774.jpg",
+      "/projects/robomaster_infantry/1780125617783.jpg",
+      "/projects/robomaster_infantry/1780125617792.jpg",
+      "/projects/robomaster_infantry/1780125617804.jpg",
+      "/projects/robomaster_infantry/1780125617812.jpg",
+      "/projects/robomaster_infantry/1780125617821.jpg",
+      "/projects/robomaster_infantry/1780125617827.jpg",
+      "/projects/robomaster_infantry/1780125692766.jpg",
     ],
     video: "/projects/robomaster_infantry/Screenrecorder-2025-05-24-18-17-56-313.mp4",
     featured: true,
@@ -64,6 +82,9 @@ export const projects: Project[] = [
     images: [
       "/projects/robomaster_engineer/IMG_20250416_000508.jpg",
       "/projects/robomaster_engineer/IMG_8522.jpg",
+      "/projects/robomaster_engineer/1776154243202.png",
+      "/projects/robomaster_engineer/1780125491901.jpg",
+      "/projects/robomaster_engineer/1780125561493.jpg",
     ],
     video: "/projects/robomaster_engineer/VID_20250423_233416.mp4",
     featured: true,
@@ -90,8 +111,15 @@ export const projects: Project[] = [
       "/projects/%E5%85%B7%E8%BA%AB%E6%99%BA%E8%83%BD%E5%AE%B6%E5%8A%A1%E6%9C%BA%E5%99%A8%E4%BA%BA%20%E5%8D%8E%E8%A5%BF%E7%B2%BE%E5%88%9B%E5%8C%BB%E7%96%97%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%EF%BC%88%E5%95%86%E6%B1%A4%E7%A7%91%E6%8A%80-%E5%8D%8E%E8%A5%BF%E5%8C%BB%E9%99%A2%E8%81%94%E5%90%88%E5%AE%9E%E9%AA%8C%E5%AE%A4%EF%BC%89/%E5%AE%B6%E5%8A%A1%E6%9C%BA%E5%99%A8%E4%BA%BA.jpg",
       "/projects/%E5%85%B7%E8%BA%AB%E6%99%BA%E8%83%BD%E5%AE%B6%E5%8A%A1%E6%9C%BA%E5%99%A8%E4%BA%BA%20%E5%8D%8E%E8%A5%BF%E7%B2%BE%E5%88%9B%E5%8C%BB%E7%96%97%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%EF%BC%88%E5%95%86%E6%B1%A4%E7%A7%91%E6%8A%80-%E5%8D%8E%E8%A5%BF%E5%8C%BB%E9%99%A2%E8%81%94%E5%90%88%E5%AE%9E%E9%AA%8C%E5%AE%A4%EF%BC%89/%E4%BA%BA%E5%BD%A2%E6%9C%BA%E5%99%A8%E4%BA%BA.jpg",
       "/projects/%E5%85%B7%E8%BA%AB%E6%99%BA%E8%83%BD%E5%AE%B6%E5%8A%A1%E6%9C%BA%E5%99%A8%E4%BA%BA%20%E5%8D%8E%E8%A5%BF%E7%B2%BE%E5%88%9B%E5%8C%BB%E7%96%97%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%EF%BC%88%E5%95%86%E6%B1%A4%E7%A7%91%E6%8A%80-%E5%8D%8E%E8%A5%BF%E5%8C%BB%E9%99%A2%E8%81%94%E5%90%88%E5%AE%9E%E9%AA%8C%E5%AE%A4%EF%BC%89/%E5%AE%9E%E9%AA%8C%E5%9C%BA%E6%99%AF.jpg",
+      "/projects/%E5%85%B7%E8%BA%AB%E6%99%BA%E8%83%BD%E5%AE%B6%E5%8A%A1%E6%9C%BA%E5%99%A8%E4%BA%BA%20%E5%8D%8E%E8%A5%BF%E7%B2%BE%E5%88%9B%E5%8C%BB%E7%96%97%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%EF%BC%88%E5%95%86%E6%B1%A4%E7%A7%91%E6%8A%80-%E5%8D%8E%E8%A5%BF%E5%8C%BB%E9%99%A2%E8%81%94%E5%90%88%E5%AE%9E%E9%AA%8C%E5%AE%A4%EF%BC%89/1780125255175.jpg",
+      "/projects/%E5%85%B7%E8%BA%AB%E6%99%BA%E8%83%BD%E5%AE%B6%E5%8A%A1%E6%9C%BA%E5%99%A8%E4%BA%BA%20%E5%8D%8E%E8%A5%BF%E7%B2%BE%E5%88%9B%E5%8C%BB%E7%96%97%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%EF%BC%88%E5%95%86%E6%B1%A4%E7%A7%91%E6%8A%80-%E5%8D%8E%E8%A5%BF%E5%8C%BB%E9%99%A2%E8%81%94%E5%90%88%E5%AE%9E%E9%AA%8C%E5%AE%A4%EF%BC%89/MVIMG_20260428_172105.jpg",
+      "/projects/%E5%85%B7%E8%BA%AB%E6%99%BA%E8%83%BD%E5%AE%B6%E5%8A%A1%E6%9C%BA%E5%99%A8%E4%BA%BA%20%E5%8D%8E%E8%A5%BF%E7%B2%BE%E5%88%9B%E5%8C%BB%E7%96%97%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%EF%BC%88%E5%95%86%E6%B1%A4%E7%A7%91%E6%8A%80-%E5%8D%8E%E8%A5%BF%E5%8C%BB%E9%99%A2%E8%81%94%E5%90%88%E5%AE%9E%E9%AA%8C%E5%AE%A4%EF%BC%89/MVIMG_20260502_134613.jpg",
+      "/projects/%E5%85%B7%E8%BA%AB%E6%99%BA%E8%83%BD%E5%AE%B6%E5%8A%A1%E6%9C%BA%E5%99%A8%E4%BA%BA%20%E5%8D%8E%E8%A5%BF%E7%B2%BE%E5%88%9B%E5%8C%BB%E7%96%97%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%EF%BC%88%E5%95%86%E6%B1%A4%E7%A7%91%E6%8A%80-%E5%8D%8E%E8%A5%BF%E5%8C%BB%E9%99%A2%E8%81%94%E5%90%88%E5%AE%9E%E9%AA%8C%E5%AE%A4%EF%BC%89/MVIMG_20260502_154854.jpg",
     ],
     video: "/projects/%E5%85%B7%E8%BA%AB%E6%99%BA%E8%83%BD%E5%AE%B6%E5%8A%A1%E6%9C%BA%E5%99%A8%E4%BA%BA%20%E5%8D%8E%E8%A5%BF%E7%B2%BE%E5%88%9B%E5%8C%BB%E7%96%97%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%EF%BC%88%E5%95%86%E6%B1%A4%E7%A7%91%E6%8A%80-%E5%8D%8E%E8%A5%BF%E5%8C%BB%E9%99%A2%E8%81%94%E5%90%88%E5%AE%9E%E9%AA%8C%E5%AE%A4%EF%BC%89/%E5%AE%B6%E5%8A%A1%E6%9C%BA%E5%99%A8%E4%BA%BAdemo.mp4",
+    videos: [
+      "/projects/%E5%85%B7%E8%BA%AB%E6%99%BA%E8%83%BD%E5%AE%B6%E5%8A%A1%E6%9C%BA%E5%99%A8%E4%BA%BA%20%E5%8D%8E%E8%A5%BF%E7%B2%BE%E5%88%9B%E5%8C%BB%E7%96%97%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%EF%BC%88%E5%95%86%E6%B1%A4%E7%A7%91%E6%8A%80-%E5%8D%8E%E8%A5%BF%E5%8C%BB%E9%99%A2%E8%81%94%E5%90%88%E5%AE%9E%E9%AA%8C%E5%AE%A4%EF%BC%89/VID_20260430_143533.mp4",
+    ],
     featured: true,
     period: "2025.11 – Present",
     details: {
@@ -115,6 +143,10 @@ export const projects: Project[] = [
     images: [
       "/projects/%E7%94%B5%E8%B5%9B/IMG_20250727_215616.jpg",
       "/projects/%E7%94%B5%E8%B5%9B/IMG_20250802_105951.jpg",
+      "/projects/%E7%94%B5%E8%B5%9B/IMG_20250805_114733.jpg",
+      "/projects/%E7%94%B5%E8%B5%9B/Image_1722657520890.jpg",
+      "/projects/%E7%94%B5%E8%B5%9B/1780125408288.jpg",
+      "/projects/%E7%94%B5%E8%B5%9B/1780125408303.jpg",
     ],
     video: "/projects/%E7%94%B5%E8%B5%9B/1775487820166_COMPRESSED.mp4",
     featured: false,
@@ -164,6 +196,7 @@ export const projects: Project[] = [
       "/projects/pi0%E5%A4%8D%E7%8E%B0/1775658319639.jpg",
       "/projects/pi0%E5%A4%8D%E7%8E%B0/796591234f2b8c8f4dd20f9dbb803c14.png",
       "/projects/pi0%E5%A4%8D%E7%8E%B0/Image_1765782191320.png",
+      "/projects/pi0%E5%A4%8D%E7%8E%B0/1780125408278.jpg",
     ],
     video: "/projects/pi0%E5%A4%8D%E7%8E%B0/Video_1763047404965.mp4",
     featured: true,
@@ -217,8 +250,15 @@ export const projects: Project[] = [
       "/projects/diy/IMG_20250615_143209.jpg",
       "/projects/diy/IMG_20250618_110445.jpg",
       "/projects/diy/IMG_20250618_133552.jpg",
+      "/projects/diy/IMG_20240426_214155.jpg",
+      "/projects/diy/IMG_20240508_000002.jpg",
+      "/projects/diy/1780125692676.jpg",
+      "/projects/diy/1780125692774.jpg",
     ],
     video: "/projects/diy/1775659923185_COMPRESSED.mp4",
+    videos: [
+      "/projects/diy/VID_20260426_185456.mp4",
+    ],
     featured: false,
     details: {
       background:

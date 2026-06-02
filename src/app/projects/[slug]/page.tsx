@@ -24,6 +24,8 @@ export default function ProjectDetailPage({ params }: { params: Promise<{ slug: 
     { title: ui.takeaways, content: project.details.takeaways },
   ];
 
+  const videos = [...(project.video ? [project.video] : []), ...(project.videos ?? [])];
+
   return (
     <main className="max-w-4xl mx-auto px-6 py-24">
       <Link href="/projects" className="text-sm text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors">{ui.back}</Link>
@@ -65,10 +67,14 @@ export default function ProjectDetailPage({ params }: { params: Promise<{ slug: 
           </div>
         </section>
       )}
-      {project.video && (
+      {videos.length > 0 && (
         <section className="mt-16">
           <h2 className="text-xl font-semibold text-neutral-900 dark:text-white mb-6">{ui.video}</h2>
-          <video src={project.video} controls className="w-full rounded-2xl bg-black" playsInline />
+          <div className="space-y-6">
+            {videos.map((src, i) => (
+              <video key={i} src={src} controls className="w-full rounded-2xl bg-black" playsInline />
+            ))}
+          </div>
         </section>
       )}
       <div className="mt-16">
