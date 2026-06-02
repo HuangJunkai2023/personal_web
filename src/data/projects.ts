@@ -87,6 +87,9 @@ export const projects: Project[] = [
       "/projects/robomaster_engineer/1780125561493.jpg",
     ],
     video: "/projects/robomaster_engineer/VID_20250423_233416.mp4",
+    videos: [
+      "/projects/robomaster_engineer/VID_20250428_200106.mp4",
+    ],
     featured: true,
     period: "2024.09 – 2025.06",
     details: {
