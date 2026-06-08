@@ -122,6 +122,7 @@ export const projects: Project[] = [
     video: "/projects/%E5%85%B7%E8%BA%AB%E6%99%BA%E8%83%BD%E5%AE%B6%E5%8A%A1%E6%9C%BA%E5%99%A8%E4%BA%BA%20%E5%8D%8E%E8%A5%BF%E7%B2%BE%E5%88%9B%E5%8C%BB%E7%96%97%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%EF%BC%88%E5%95%86%E6%B1%A4%E7%A7%91%E6%8A%80-%E5%8D%8E%E8%A5%BF%E5%8C%BB%E9%99%A2%E8%81%94%E5%90%88%E5%AE%9E%E9%AA%8C%E5%AE%A4%EF%BC%89/%E5%AE%B6%E5%8A%A1%E6%9C%BA%E5%99%A8%E4%BA%BAdemo.mp4",
     videos: [
       "/projects/%E5%85%B7%E8%BA%AB%E6%99%BA%E8%83%BD%E5%AE%B6%E5%8A%A1%E6%9C%BA%E5%99%A8%E4%BA%BA%20%E5%8D%8E%E8%A5%BF%E7%B2%BE%E5%88%9B%E5%8C%BB%E7%96%97%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%EF%BC%88%E5%95%86%E6%B1%A4%E7%A7%91%E6%8A%80-%E5%8D%8E%E8%A5%BF%E5%8C%BB%E9%99%A2%E8%81%94%E5%90%88%E5%AE%9E%E9%AA%8C%E5%AE%A4%EF%BC%89/VID_20260430_143533.mp4",
+      "/projects/%E5%85%B7%E8%BA%AB%E6%99%BA%E8%83%BD%E5%AE%B6%E5%8A%A1%E6%9C%BA%E5%99%A8%E4%BA%BA%20%E5%8D%8E%E8%A5%BF%E7%B2%BE%E5%88%9B%E5%8C%BB%E7%96%97%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%EF%BC%88%E5%95%86%E6%B1%A4%E7%A7%91%E6%8A%80-%E5%8D%8E%E8%A5%BF%E5%8C%BB%E9%99%A2%E8%81%94%E5%90%88%E5%AE%9E%E9%AA%8C%E5%AE%A4%EF%BC%89/%E8%9E%BA%E6%AF%8D.mp4",
     ],
     featured: true,
     period: "2025.11 – Present",
@@ -221,6 +222,12 @@ export const projects: Project[] = [
       "Designed and built this personal portfolio site from scratch with Next.js 16, React 19, TypeScript, and Tailwind CSS v4. Features bilingual (EN/ZH) content, dark mode, framer-motion animations, and project detail pages with image galleries and video embeds.",
     category: "Web Development",
     tags: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    image: "/projects/%E7%BD%91%E9%A1%B5/Snipaste_2026-06-08_20-59-00.png",
+    images: [
+      "/projects/%E7%BD%91%E9%A1%B5/Snipaste_2026-06-08_20-59-00.png",
+      "/projects/%E7%BD%91%E9%A1%B5/Snipaste_2026-06-08_21-00-13.png",
+      "/projects/%E7%BD%91%E9%A1%B5/Snipaste_2026-06-08_21-00-21.png",
+    ],
     featured: false,
     period: "2026.05",
     details: {
