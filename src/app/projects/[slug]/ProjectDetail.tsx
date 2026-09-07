@@ -7,6 +7,7 @@ import { useLang } from "@/context/LangContext";
 import { t } from "@/data/translations";
 import { projects } from "@/data/projects";
 import { projectsZh } from "@/data/projects.zh";
+import { assetPath } from "@/lib/assetPath";
 
 export default function ProjectDetail({ slug }: { slug: string }) {
   const { lang } = useLang();
@@ -70,7 +71,7 @@ export default function ProjectDetail({ slug }: { slug: string }) {
           <h2 className="text-xl font-semibold text-neutral-900 dark:text-white mb-6">{ui.video}</h2>
           <div className="space-y-6">
             {videos.map((src, i) => (
-              <video key={i} src={src} controls className="w-full rounded-2xl bg-black" playsInline />
+              <video key={i} src={assetPath(src)} controls className="w-full rounded-2xl bg-black" playsInline />
             ))}
           </div>
         </section>
