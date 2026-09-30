@@ -70,7 +70,7 @@ export const projectsZh: Project[] = [
     details: {
       background:
         "工程机器人需要自主拾取矿石并完成资源兑换——这要求精准的7自由度机械臂控制，以及高层规划器与实时嵌入式控制器之间的可靠通信。",
-      work: "实现 STM32 下位机与 ROS2 上位机之间的 USB 虚拟串口通信，采用环形缓冲区与 DMA 乒乓缓冲区保障高吞吐量数据传输，在独立 FreeRTOS 任务中完成 CRC 校验。上位机基于 ROS2 + MoveIt2 + KDL 开发机械臂控制模块，在 NVIDIA Isaac Sim 完成仿真验证。使用 IKFast（URDF 自动生成）进行逆运动学求解，单次解算仅需 4ms；正运动学采用 KDL 库处理不满足 Pieper 准则的构型。自研示教器，通过绝对编码器位置映射机械臂关节闭环位置，实现高精度示教与数据采集。",
+      work: "实现 STM32 下位机与 ROS2 上位机之间的 USB 虚拟串口通信，采用环形缓冲区与 DMA 乒乓缓冲区保障高吞吐量数据传输，在独立 FreeRTOS 任务中完成 CRC 校验。上位机基于 ROS2 + MoveIt2 + KDL 开发机械臂控制模块，在 NVIDIA Isaac Sim 完成仿真验证。使用 IKFast（URDF 自动生成）进行逆运动学求解，单次解算仅需 4ms；正运动学采用 KDL 库处理不满足 Pieper 准则的构型。自研重力补偿机械臂示教器，通过绝对编码器位置映射机械臂关节闭环位置，实现高精度示教与数据采集。",
       challenges:
         "在运动底盘上协调7自由度机械臂需要精细的坐标系变换和延时管理。IKFast 求解器需要关节限位准确的 URDF 文件，以避免奇异点附近的退化解。",
       takeaways:
@@ -81,9 +81,9 @@ export const projectsZh: Project[] = [
     slug: "embodied-ai-housework-robot",
     title: "具身智能家务机器人",
     description:
-      "基于 Diffusion Policy 和 VLA（π0.5）构建家务任务移动操作系统，部署于7自由度机械臂+差速底盘，使用单台手机完成 TeleOp 数据采集。",
+      "独立搭建移动操作机器人学习系统，以同构机械臂采集示教数据，完成 Diffusion Policy 真机部署；纯视觉螺母抓取放置成功率约 50%，正在研究视觉与触觉融合。",
     category: "机器人与具身智能",
-    tags: ["Diffusion Policy", "VLA", "ROS1", "Jetson", "RealSense", "Python"],
+    tags: ["Diffusion Policy", "TeleOp", "FSR 触觉阵列", "Jetson", "RealSense", "Python"],
     image: "/projects/%E5%85%B7%E8%BA%AB%E6%99%BA%E8%83%BD%E5%AE%B6%E5%8A%A1%E6%9C%BA%E5%99%A8%E4%BA%BA%20%E5%8D%8E%E8%A5%BF%E7%B2%BE%E5%88%9B%E5%8C%BB%E7%96%97%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%EF%BC%88%E5%95%86%E6%B1%A4%E7%A7%91%E6%8A%80-%E5%8D%8E%E8%A5%BF%E5%8C%BB%E9%99%A2%E8%81%94%E5%90%88%E5%AE%9E%E9%AA%8C%E5%AE%A4%EF%BC%89/%E5%AE%B6%E5%8A%A1%E6%9C%BA%E5%99%A8%E4%BA%BA.jpg",
     images: [
       "/projects/%E5%85%B7%E8%BA%AB%E6%99%BA%E8%83%BD%E5%AE%B6%E5%8A%A1%E6%9C%BA%E5%99%A8%E4%BA%BA%20%E5%8D%8E%E8%A5%BF%E7%B2%BE%E5%88%9B%E5%8C%BB%E7%96%97%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%EF%BC%88%E5%95%86%E6%B1%A4%E7%A7%91%E6%8A%80-%E5%8D%8E%E8%A5%BF%E5%8C%BB%E9%99%A2%E8%81%94%E5%90%88%E5%AE%9E%E9%AA%8C%E5%AE%A4%EF%BC%89/%E5%AE%B6%E5%8A%A1%E6%9C%BA%E5%99%A8%E4%BA%BA.jpg",
@@ -100,15 +100,15 @@ export const projectsZh: Project[] = [
       "/projects/%E5%85%B7%E8%BA%AB%E6%99%BA%E8%83%BD%E5%AE%B6%E5%8A%A1%E6%9C%BA%E5%99%A8%E4%BA%BA%20%E5%8D%8E%E8%A5%BF%E7%B2%BE%E5%88%9B%E5%8C%BB%E7%96%97%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%EF%BC%88%E5%95%86%E6%B1%A4%E7%A7%91%E6%8A%80-%E5%8D%8E%E8%A5%BF%E5%8C%BB%E9%99%A2%E8%81%94%E5%90%88%E5%AE%9E%E9%AA%8C%E5%AE%A4%EF%BC%89/%E8%9E%BA%E6%AF%8D.mp4",
     ],
     featured: true,
-    period: "2025.11 – 至今",
+    period: "2026.02 – 至今",
     details: {
       background:
-        "华西精创医疗科技有限公司（商汤科技-华西医院联合实验室）科研项目。目标：构建能够完成家务任务（如擦桌子、搬运物品）的移动操作系统，通过模仿学习从人类示教中习得技能。",
-      work: "以 Jetson 边缘计算平台为核心控制节点，接入腕部 1080p 180° 鱼眼相机和底盘 RealSense 深度相机进行感知。视觉数据通过无线网络传输至远程 RTX 2080Ti 推理服务器，运行 Diffusion Policy 和 VLA（π0.5）模型进行动作策略推理。Jetson 接收推理结果后控制朴为 P500 二轮差速底盘（借助 ROS1 Docker）与 Rokae ER3 Pro 七轴机械臂及 Jodell EPG 二指夹爪执行任务。数据采集使用手机 AR 功能（TeleOp）读取位姿，仅需一台手机即可完成整个系统示教。",
+        "在华西精创医疗科技有限公司（商汤科技-华西医院联合实验室）担任科研助理，构建从示教数据采集到策略训练与真机执行的移动操作系统，并研究精细装配中的视觉与触觉融合。",
+      work: "独立集成移动底盘、七轴机械臂、夹爪、鱼眼 RGB 相机、深度相机、Jetson 控制节点与推理服务器。设计 lerobot-Uarm 同构机械臂示教器，实现主从 TeleOp 数据采集，完成 Diffusion Policy 训练、推理与真机部署闭环。实现螺母抓取并放置至螺丝顶端的任务，纯视觉策略成功率约 50%。进一步设计并搭建双侧 3×3 FSR 压力触觉阵列，采集夹持过程中的接触压力变化。",
       challenges:
-        "在无线环境下以可接受的延迟闭合感知-决策-执行回路，需要对整个推理流水线进行精细优化。鱼眼镜头引入的显著畸变需要在输入策略网络前进行标定校正。",
+        "纯视觉策略能够定位目标，却难以在接触后感知螺母滑动、夹持不稳和微小偏位。这些缺失的接触反馈是提升精细装配稳定性的主要瓶颈。",
       takeaways:
-        "持续进行中的科研项目。目前正在探索面向接触密集型装配任务的触觉增强扩散策略，将高层动作生成与高频触觉残差修正相结合。",
+        "已完成纯视觉 Diffusion Policy 的螺母抓取与放置实验。正在研究如何利用触觉判断接触与滑移状态、辅助动作修正；融合触觉后的效果仍在实验验证中。",
     },
   },
   {

@@ -22,7 +22,7 @@ export const t = {
       nowTitle: "What I'm Working On",
       now: [
         "Tactile-augmented diffusion policies for contact-rich robotic assembly",
-        "Hierarchical tactile force-control execution framework (slow policy + fast tactile residual)",
+        "Bilateral 3×3 FSR tactile arrays for contact and slip detection",
         "Continued development of the RoboMaster robot platform",
         "Sim-to-real transfer and TeleOp data collection pipelines",
       ],
@@ -87,7 +87,7 @@ export const t = {
       nowTitle: "当前在做的事",
       now: [
         "面向接触密集型机器人装配任务的触觉增强扩散策略研究",
-        "分层触觉力控执行框架（慢速策略 + 高频触觉残差修正）",
+        "双侧 3×3 FSR 触觉阵列与接触、滑移状态判断",
         "持续迭代 RoboMaster 机器人平台",
         "Sim-to-Real 迁移与 TeleOp 数据采集流程优化",
       ],
